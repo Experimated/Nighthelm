@@ -1,0 +1,125 @@
+{
+  "identity": {
+    "name": "NightHelm",
+    "persona": "E1 - The Anti-AI Designer",
+    "archetype": "Electric Calm (Archetype 7 mixed with 5)",
+    "tone": "Protective, Calm, Professional, Minimalist",
+    "mission": "Prevent risky late-night texts with speed and elegance."
+  },
+  "typography": {
+    "font_family": {
+      "heading": "Outfit, sans-serif",
+      "body": "Inter, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "imports": [
+      "@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');"
+    ],
+    "rules": [
+      "Use 'Outfit' for all Headings (h1-h6). Weight: 500 or 600.",
+      "Use 'Inter' for body text, inputs, and buttons.",
+      "Headings > 32px must have tracking-tight (-0.02em).",
+      "Small labels (uppercase) must have tracking-widest (0.1em) and font-medium."
+    ]
+  },
+  "colors": {
+    "theme": "dark",
+    "palette": {
+      "background": "#0A0A0B",
+      "foreground": "#FAFAFA",
+      "card": "#18181B",
+      "card_foreground": "#FAFAFA",
+      "popover": "#121214",
+      "popover_foreground": "#FAFAFA",
+      "primary": "#7C3AED",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#27272A",
+      "secondary_foreground": "#FAFAFA",
+      "muted": "#27272A",
+      "muted_foreground": "#A1A1AA",
+      "accent": "#2E1065",
+      "accent_foreground": "#FAFAFA",
+      "destructive": "#7F1D1D",
+      "destructive_foreground": "#FEF2F2",
+      "border": "#27272A",
+      "input": "#27272A",
+      "ring": "#7C3AED"
+    },
+    "gradients": {
+      "primary_action": "bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-400 hover:to-violet-500",
+      "subtle_glow": "bg-gradient-to-tr from-indigo-500/10 via-purple-500/5 to-transparent",
+      "text_gradient": "bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-violet-400"
+    },
+    "forbidden": [
+      "#000000 (Pure Black)",
+      "#1B93A4 (Teal)",
+      "#7351B7 (Specific AI Purple)"
+    ]
+  },
+  "layout": {
+    "container": "max-w-md mx-auto min-h-screen bg-background relative overflow-hidden",
+    "spacing": {
+      "page_padding": "p-6",
+      "section_gap": "gap-6",
+      "item_gap": "gap-4"
+    },
+    "radius": {
+      "default": "rounded-3xl",
+      "button": "rounded-full",
+      "card": "rounded-3xl",
+      "input": "rounded-2xl"
+    },
+    "grid_strategies": [
+      "Bento Grid for Home: grid-cols-2 gap-4. Primary actions take full width or large squares.",
+      "Flow Layout: Flex-col with 'mt-auto' for bottom actions to ensure thumb reachability."
+    ]
+  },
+  "components": {
+    "buttons": {
+      "primary": "h-14 rounded-full text-lg font-medium shadow-[0_0_20px_rgba(124,58,237,0.3)] transition-all hover:scale-[1.02] active:scale-[0.98]",
+      "secondary": "h-14 rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/80",
+      "ghost": "h-12 rounded-xl hover:bg-white/5 text-muted-foreground hover:text-white",
+      "destructive": "h-14 rounded-full bg-red-900/20 text-red-400 border border-red-900/50 hover:bg-red-900/30"
+    },
+    "cards": {
+      "base": "bg-card border border-white/5 shadow-2xl shadow-black/40 backdrop-blur-sm",
+      "interactive": "cursor-pointer transition-all hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] group"
+    },
+    "inputs": {
+      "textarea": "bg-secondary/50 border-white/5 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-2xl p-4 text-lg resize-none placeholder:text-muted-foreground/50",
+      "chips": "rounded-full px-4 py-2 text-sm font-medium transition-all cursor-pointer border border-white/10 hover:border-indigo-500/50 data-[state=checked]:bg-indigo-600 data-[state=checked]:border-indigo-500 data-[state=checked]:text-white"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-background/80 border-b border-white/5 sticky top-0 z-50",
+    "noise": "fixed inset-0 z-[1] opacity-[0.03] pointer-events-none mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]",
+    "animations": {
+      "enter": "animate-in fade-in slide-in-from-bottom-4 duration-500 ease-out",
+      "exit": "animate-out fade-out slide-out-to-bottom-4 duration-300 ease-in",
+      "pulse_slow": "animate-pulse duration-[3000ms]"
+    }
+  },
+  "image_assets": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1771814574230-49e5a374aafe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhcmslMjBncmFkaWVudCUyMHB1cnBsZSUyMGJsdWV8ZW58MHx8fHwxNzcyOTIxMDg0fDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Abstract Blue Purple Night Gradient",
+      "usage": "Use as a subtle background layer with low opacity (20%) behind the main content area to give depth."
+    }
+  },
+  "instructions_to_main_agent": [
+    "1. SETUP: Add the Google Fonts import to index.css immediately.",
+    "2. THEME: Update the CSS variables in index.css with the values provided in 'colors.palette'. Do NOT just use arbitrary hex codes in components.",
+    "3. LAYOUT: Build a 'MobileContainer' component that centers content max-w-md and handles the min-h-screen background.",
+    "4. COMPONENTS: heavily customize the Shadcn components. Radius must be 1.5rem (24px) or 1rem (16px). NO SHARP CORNERS.",
+    "5. NAVIGATION: The Home screen is the hub. Use a Bento Grid layout for the 4 main buttons.",
+    "6. MICRO-INTERACTIONS: Every tap must provide feedback. Use active:scale-[0.98] on all buttons and cards.",
+    "7. CRITICAL: Ensure inputs (textarea) are large enough for thumb typing. Font size 16px+ to prevent iOS zoom.",
+    "8. TOASTS: Use 'sonner' for all notifications (e.g., 'Message Scheduled').",
+    "9. ICONS: Use 'lucide-react' (default). Choose rounded/soft icons."
+  ],
+  "accessibility": {
+    "contrast": "Ensure all text meets WCAG AA standards. Use light grey (zinc-400) for secondary text, not dark grey.",
+    "touch_targets": "All interactive elements must be at least 44x44px.",
+    "focus_states": "Visible focus rings in indigo-500 for keyboard/screen reader users."
+  }
+}
