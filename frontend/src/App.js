@@ -261,7 +261,7 @@ export default function App() {
       case "home":
         return (
           <HomeScreen
-            scheduledMessages={scheduledMessages.filter((m) => ["scheduled", "pending"].includes(m.status))}
+            scheduledMessages={(Array.isArray(scheduledMessages) ? scheduledMessages : []).filter((m) => ["scheduled", "pending"].includes(m.status))}
             onStartFlowA={() => { setCurrentFlow("a"); navigate("flow-a-recipient"); }}
             onStartFlowB={() => { setCurrentFlow("b"); navigate("flow-b-recipient"); }}
             onSettings={() => navigate("settings")}
