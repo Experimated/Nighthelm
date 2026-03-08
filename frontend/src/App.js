@@ -326,7 +326,7 @@ export default function App() {
             setSendTime={setSendTime}
             selectedRecipient={selectedRecipient}
             setSelectedRecipient={setSelectedRecipient}
-            recipients={recipients}
+            recipients={Array.isArray(recipients) ? recipients : []}
             currentFlow={currentFlow}
             onSend={onSendMessage}
             onBack={() => navigate(currentFlow === "a" ? "flow-a-excuses" : "flow-b-analysis")}
@@ -352,7 +352,7 @@ export default function App() {
             setSelectedType={setSelectedType}
             selectedRecipient={selectedRecipient}
             setSelectedRecipient={setSelectedRecipient}
-            recipients={recipients}
+            recipients={Array.isArray(recipients) ? recipients : []}
             onContinue={() => navigate("flow-b-write")}
             onBack={() => navigate("home")}
           />
