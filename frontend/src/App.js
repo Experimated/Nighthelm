@@ -272,7 +272,7 @@ export default function App() {
       case "scheduled":
         return (
           <ScheduledMessages
-            messages={scheduledMessages}
+            messages={Array.isArray(scheduledMessages) ? scheduledMessages : []}
             onCancelOne={onCancelMessage}
             onCancelAll={onCancelAllMessages}
             onDeleteSent={onDeleteSentMessage}
@@ -288,7 +288,7 @@ export default function App() {
             setSelectedType={setSelectedType}
             selectedRecipient={selectedRecipient}
             setSelectedRecipient={setSelectedRecipient}
-            recipients={recipients}
+            recipients={Array.isArray(recipients) ? recipients : []}
             onContinue={onFlowARecipientContinue}
             onBack={() => navigate("home")}
           />
