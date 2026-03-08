@@ -64,7 +64,7 @@ export default function RecipientSelect({
 
       {hasRecipients ? (
         <div className="space-y-2" data-testid="recipient-list">
-          {recipients.map((r) => (
+          {(Array.isArray(recipients) ? recipients : []).map((r) => (
             <button
               key={r.id}
               data-testid={`recipient-option-${r.id}`}
