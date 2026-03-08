@@ -83,7 +83,7 @@ export default function Settings({
             </div>
           ) : (
             <div className="space-y-2">
-              {recipients.map((r) => (
+              {(Array.isArray(recipients) ? recipients : []).map((r) => (
                 <div
                   key={r.id}
                   data-testid={`recipient-item-${r.id}`}
