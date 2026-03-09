@@ -76,9 +76,17 @@ sounds risky, emotional, or unprofessional.
 
 Rules:
 - Respond in the SAME LANGUAGE as the input text.
-- Be concise.
-- Do not invent drama.
-- Focus on professionalism, clarity and believability.
+- Be concise and professional.
+- Do NOT add greetings, names, signatures, or email formatting.
+- Do NOT use placeholders like [Name] or [Your Name].
+- Return ONLY the core message text.
+- The application will add greeting and signature automatically.
+
+Focus on:
+- professionalism
+- clarity
+- believability
+- emotional tone
 
 Return JSON ONLY in this format:
 
